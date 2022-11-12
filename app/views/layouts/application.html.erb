@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anarchy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+  <%= render 'home/header' %>
+
+    <% if flash[:notice] %>
+      <br/>
+      <div class="container">
+        <div class="alert alert-primary">
+          <%= notice %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+    <div class="container">
+      <div class=".notification.is-danger.global-notification">
+      <p class="alert"> <%= alert %> </p>
+      </div>
+    </div>
+    <% end %>
+    <br/>
+    <%= yield %>
+  </body>
+</html>

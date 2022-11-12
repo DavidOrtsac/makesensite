@@ -1,0 +1,36 @@
+<style>
+.nav-link {
+	transition: .5s ease;
+}
+.nav-link:hover {
+	opacity: 0.8;
+}
+.mx-auto {
+	transition: .5s ease;
+}
+.mx-auto:hover {
+  transform: scale(1.1);
+}
+.navbar-brand:active {
+	opacity: 0.5;
+}
+</style>
+	
+	
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow">
+	  <div class="container-fluid">
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+		  <ul class="navbar-nav me-auto order-0 nav-pills">
+			<li class="nav-item">
+			  <%= link_to "About", home_about_path, class: "nav-link bg-info text-white" %>
+			</li>
+		  </ul>
+		  <div class="mx-auto">
+			<%= link_to "The Anarchy Wall", posts_path, class: "navbar-brand" %>
+			</button>
+		</div>
+		  <form class="d-flex ms-auto order-5">
+          </form>
+		</div>
+	  </div>
+	</nav>

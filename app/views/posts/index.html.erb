@@ -1,0 +1,43 @@
+<style>
+.postlink {
+transition: .5s ease;
+}
+
+.postlink:hover {
+  font-size: 30px;
+
+}
+
+.post {
+  transition: .5s ease;
+}
+
+.post:hover {
+  transform: scale(1.02);
+}
+
+</style>
+
+<div class="d-grid gap-3">
+<h1 class="text-center"></h1>
+<br/>
+  <div class="container">
+<div id="posts" class="p-2 bg-light border rounded-4 d-grid gap-3">
+  <div class="p-2 bg-light rounded-4">
+    <% if @posts.each do |post| %>
+      <div class="p-3 shadow rounded-4 post">
+      <%= render post %>
+        <!-- <%= link_to "Show this post", post, class: "btn btn-primary" %> -->
+        <%= button_to "Delete", post, method: :delete, class: "btn btn-danger btn-sm float-end" %>
+        <br/>
+      </div>
+        <br/>
+      <% end.empty? %>
+      <p> There are no messages... yet </p>
+      <% end %>
+        <%= link_to "New post", new_post_path, class: "btn btn-primary text-center" %>
+    </div>
+  </div>
+</div>
+</div>
+<br/>
