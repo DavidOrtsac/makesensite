@@ -1,11 +1,14 @@
-<div class="container">
-  <h1>New message</h1>
 
-  <%= render "form", post: @post %>
+<div class="rounded-5 shadow">
+  <div class="container">
+    <h1 class="form-label">New message</h1>
 
-  <br>
+    <%= render "form", post: @post %>
 
-  <div>
-    <%= link_to "Back", posts_path %>
+    <br>
+
+    <div>
+      <%= link_to "Back", posts_path %>
+    </div>
   </div>
 </div>
