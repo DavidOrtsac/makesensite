@@ -1,14 +1,16 @@
 
-<div class="rounded-5 shadow">
-  <div class="container">
-    <h1 class="form-label">New message</h1>
+<div class="container">
+  <div class="rounded-5 shadow p-3">
+    <div class="container">
+      <h1 class="form-label">New message</h1>
 
-    <%= render "form", post: @post %>
-
-    <br>
-
-    <div>
-      <%= link_to "Back", posts_path %>
+      <%= render "form", post: @post %>
+      <br>
+      <div>
+        <%= link_to "Back", posts_path, class: "btn btn-secondary" %>
+      </div>
     </div>
   </div>
 </div>
+
+<br/>
