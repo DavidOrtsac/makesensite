@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <style>
+<style>
 * {
   margin: 0;
 }
@@ -19,6 +19,29 @@ main {
 } 
 footer, .push {
   height: 100px;
+}
+.nav-link {
+	transition: .5s ease;
+}
+.nav-link:hover {
+	opacity: 0.8;
+}
+.anarchyheader {
+	transition: .5s ease;
+}
+.anarchyheader:hover {
+  transform: scale(1.1);
+}
+.navbar-brand:active {
+	opacity: 0.5;
+}
+.about {
+ background-color: #04AA6D;
+ display: block;
+ transition: .5s ease
+}
+.about:hover {
+  background-color: #90EE90;
 }
 </style>
  
