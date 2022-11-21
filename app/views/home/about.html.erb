@@ -3,14 +3,15 @@
 </style>
 
 <div class="about-section shadow">
-  <h1 class="anarchyfont">What is the Anarchy Wall?</h1>
+  <h1 class="anarchyfont anarchyheader">What is the Anarchy Wall?</h1>
 </div>
 <div class="p-3">
 <br/>
 <h3 class="text-center"> <em class="anarchyfont"> The Anarchy Wall </em> is a place where free speech is truly free... </h3>
 <p class="text-center anarchyfont">  ...or is it? </p>
+<br/>
 <p class="text-center">  In here you can say anything you want, but there's a twist. </p>
-<div class="text-center anarchyfont"> Anyone can <input id="disbtn" type="button" value="Delete" class="btn btn-outline-danger" onclick="showMore()"> anything you say. </div>
+<div class="text-center anarchyfont"> Anyone can <input id="disbtn" type="button" value="Delete" class="btn btn-outline-danger" onclick="hide()"> anything you say. </div>
 <br/>
 <p class="text-center">  There's only one rule on this site and that is: </p>
 <em> <p class="text-center">  I am not responsible for your interactions with other people here. </p> </em>
@@ -22,8 +23,9 @@
 var button = document.getElementById("disbtn");
 var d3 = document.getElementById("disappearingbtn");
 
-function showMore() {
+function hide() {
     button.style.display="none";
     d3.style.display="block";
 }
 </script>
+<%= render 'home/loader' %>
