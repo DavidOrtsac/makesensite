@@ -12,11 +12,11 @@
   <% end %>
 
   <div>
-    <%= form.text_area :post, class: "form-control" %>
+    <%= form.text_area :post, class: "form-control p-3 rounded-4 bg-light" %>
   </div>
   <br/>
   <div>
-    <%= form.submit class: "btn btn-primary" %>
-    <%= link_to "Back", posts_path, class: "btn btn-secondary" %>
+    <%= form.submit class: "btn btn-sm btn-primary" %> |
+    <%= link_to "Back", posts_path, class: "btn btn-sm btn-secondary" %>
   </div>
 <% end %>
