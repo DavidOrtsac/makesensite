@@ -25,6 +25,10 @@
   font-family: 'Rubik Mono One';
 }
 
+.mobileshow {
+  display: none;
+}
+
 main {
   min-height: 100vh;
   margin-bottom: -100px;
@@ -139,6 +143,9 @@ html {
   justify-content: center;
   align-items: center;
 }
+.ungodly {
+  display: none;
+}
 .loader {
   height: 25px;
   width: 25px;
@@ -188,11 +195,41 @@ html {
     .navbar {
       display: block;
     }
-    .btn-outline-danger {
+    .mobileomit {
       display: none;
+    }
+    .mobileshow {
+      display: block;
     }
     .mobilecenter {
       text-align: center;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .btn {
+        display: block;
+    }
+    .navbar {
+      display: none;
+    }
+    .mobileomit {
+      display: none;
+    }
+    .mobileshow {
+      display: none;
+    }
+    .mobilecenter {
+      display: none
+    }
+    .nav {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    .ungodly {
+      display: block;
     }
 }
 </style>
@@ -205,11 +242,9 @@ html {
   <main>
     <% if flash[:notice] %>
       <br/>
-      <div class="container">
         <div class="alert alert-primary">
           <%= notice %>
         </div>
-      </div>
     <% end %>
 
     <% if flash[:alert] %>
