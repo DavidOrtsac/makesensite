@@ -3,7 +3,11 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.sort_by(&:created_at)
+  end
+
+  def format_time(time, timezone)
+    time.in_time_zone(timezone)
   end
 
   # GET /posts/1 or /posts/1.json

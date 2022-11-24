@@ -1,11 +1,12 @@
-<div class="container">
-
+<div class="mx-auto p-4">
+<div class="p-3 shadow rounded-4 post border">
   <%= render @post %>
-
-  <div>
-    <%= link_to "Edit", edit_post_path(@post) %> |
+  <div class="p-3">
+   <!--- <%= link_to "Edit", edit_post_path(@post) %> | --->
     <%= link_to "Back", posts_path %>
-    <%= button_to "Delete", @post, method: :delete %>
+    <%= button_to "Delete", @post, method: :delete, class: "btn btn-outline-danger btn-sm float-end mobileomit" %>
+    <br/>
   </div>
 
+</div>
 </div>
