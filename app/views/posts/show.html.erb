@@ -3,10 +3,19 @@
   <%= render @post %>
   <div class="p-3">
    <!--- <%= link_to "Edit", edit_post_path(@post) %> | --->
-    <%= link_to "Back", posts_path %>
     <%= button_to "Delete", @post, method: :delete, class: "btn btn-outline-danger btn-sm float-end mobileomit" %>
+    <%= link_to "Back", posts_path, class: "btn btn-sm btn-secondary float-left" %>
     <br/>
   </div>
-
+  <section class="section comments">
+    <h4> <strong> <%= @post.comments.count %> </strong> comments </h4>
+    <hr>
+    <%= render @post.comments %>
+  <hr>
+  <div class="p-3 shadow rounded-3 border">
+    <%= render 'comments/form' %>
+  </div>
+  </section>
+  
 </div>
 </div>

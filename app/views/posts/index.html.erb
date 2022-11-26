@@ -26,10 +26,10 @@ transition: .5s ease;
     <% if @posts.each do |post| %>
       <div class="p-3 shadow rounded-4 post border">
       <%= render post %>
-       <%= link_to "Comments", post, class: "btn btn-outline-secondary btn-sm float-end mobileomit" %> 
         <%= button_to "Delete", post, method: :delete, class: "btn btn-outline-danger btn-sm float-end mobileomit" %>
+        <%= link_to "Comments", post, class: "btn btn-outline-secondary btn-sm float-end mobileomit" %>  
         <%= button_to "×", post, method: :delete, class: "btn btn-outline-danger btn-sm float-end mobileshow" %>
-
+        <%= link_to "💬", post, class: "btn btn-outline-secondary btn-sm float-end mobileshow" %>  
         <br/>
       </div>
         <br/>
