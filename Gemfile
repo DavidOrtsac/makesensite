@@ -16,6 +16,7 @@ gem "simple_form", "~> 5.1"
 gem "material_icons", "~> 2.2", ">= 2.2.1"
 gem "rinku", "~> 2.0", ">= 2.0.6"
 gem "font-awesome-rails"
+gem "devise", "~> 4.8", ">= 4.8.1"
 
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
