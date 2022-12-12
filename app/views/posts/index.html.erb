@@ -26,18 +26,23 @@ transition: .5s ease;
     <% if @posts.each do |post| %>
       <div class="p-3 shadow rounded-4 post border">
       <%= render post %>
-        <%= button_to "Delete", post, method: :delete, class: "btn btn-outline-danger btn-sm float-end mobileomit" %>
-        <%= link_to "Comments", post, class: "btn btn-outline-secondary btn-sm float-end mobileomit" %>  
-        <%= button_to "×", post, method: :delete, class: "btn btn-outline-danger btn-sm float-end mobileshow" %>
-        <%= link_to "💬", post, class: "btn btn-outline-secondary btn-sm float-end mobileshow" %>  
-        <br/>
+        <% if user_signed_in? %>
+          <%= button_to "Delete", post, method: :delete, class: "btn btn-outline-danger btn-sm float-end mobileomit" %>
+        <% end %>
+          <%= link_to "Comments", post, class: "btn btn-outline-secondary btn-sm float-end mobileomit" %>
+        <% if user_signed_in? %>
+          <%= button_to "×", post, method: :delete, class: "btn btn-outline-danger btn-sm float-end mobileshow" %>
+        <% end %>
+          <%= link_to "💬", post, class: "btn btn-outline-secondary btn-sm float-end mobileshow" %>  
+          <br/>
       </div>
         <br/>
       <% end.empty? %>
       <p> It's all quiet on the western front... </p>
       <% end %>
+      <% if user_signed_in? %>
         <%= link_to "New message", new_post_path, class: "btn btn-primary text-center" %>
-
+      <% end %>
   </div>
 </div>
 </div>
