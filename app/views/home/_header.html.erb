@@ -1,33 +1,31 @@
+<style>
+.topnav-right {
+float: right;
+}
+</style>
 	
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow">
+	<nav class="navbar navbar-expand-sm shadow">
 	  <div class="container-fluid">
-		<div class="collapse navbar-collapse " id="navbarSupportedContent">
-		  <ul class="navbar-nav me-auto order-0 nav-pills">
-			<li class="nav-item">
-			  <%= link_to "About", home_about_path, class: "nav-link bg-dark text-white" %>
-			</li>
-			<% if user_signed_in? %>
-			<li class="nav-item">
-			  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link bg-dark text-white" %>
-			</li>
-			<li class="nav-item">
-			  <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link bg-dark text-white" %>
-			</li>
+		<div>
+		  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<li class="mx-auto container"> <%= link_to "MakeSensei", posts_path, class: "navbar-brand" %> </li>
+			<li class="nav-item"> <%= link_to "About", home_about_path, class: "nav-link" %> </li>
 
-			<% else %>
-			
-			<li class="nav-item">
-			  <%= link_to "Sign Up", new_user_registration_path, class: "nav-link bg-dark text-white" %>
-			</li>
-			<li class="nav-item">
-			  <%= link_to "Log In", new_user_session_path, class: "nav-link bg-dark text-white" %>
-			</li>
-			<% end %>
+			<% if user_signed_in? %>
+
+			<li class="nav-item"> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %> </li>
+			<li class="nav-item"> <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %> </li>
+
+				<% else %>
+						<li class="nav-item">
+						<%= link_to "Sign in", new_user_registration_path, class: "nav-link navbar-right" %>
+						</li>
+						<li class="nav-item pull-right">
+						<%= link_to "Log in", new_user_session_path, class: "nav-link navbar-right" %>
+						</li>
+				<% end %>
+
 		  </ul>
-		  <div class="mx-auto anarchyheader">
-			<%= link_to "The Anarchy Wall", posts_path, class: "navbar-brand" %>
-			</button>
-		</div>
 		  <form class="d-flex ms-auto order-5">
           </form>
 		</div>

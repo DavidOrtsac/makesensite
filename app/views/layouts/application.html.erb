@@ -5,10 +5,11 @@
 <script>
   WebFont.load({
     google: {
-      families: ['Rubik Mono One', 'Droid Serif']
+      families: ['Manrope', 'Droid Serif']
     }
   });
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Anarchy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <%= csrf_meta_tags %>
@@ -17,12 +18,32 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<style> @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap'); </style>
 <style>
 * {
   margin: 0;
 }
-.anarchyheader, .anarchyfont {
-  font-family: 'Rubik Mono One';
+.columns {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex: 1 0 0px;
+  width: 1px;
+  height: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px 0px 50px;
+  max-width: 1300px;
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 60;
+  background-image: url(/* makesensei image.jpg */);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .mobileshow {
@@ -36,20 +57,30 @@ main {
 footer, .push {
   height: 100px;
 }
+.nav-item {
+  color: white;
+  width: 100%;
+}
 .nav-link {
-	transition: .5s ease;
+	color: white;
+  font-family: 'Manrope', sans-serif;
 }
 .nav-link:hover {
 	opacity: 0.8;
 }
-.anarchyheader {
-	transition: .5s ease;
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height:12.9%;
+  color: white;
 }
-.anarchyheader:hover {
-  transform: scale(1.1);
-}
-.navbar-brand:active {
-	opacity: 0.5;
+.navbar-brand {
+	font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  color: white;
 }
 .about {
  background-color: #04AA6D;
@@ -62,6 +93,7 @@ footer, .push {
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-color: black;
 }
 
 html {
@@ -239,6 +271,7 @@ html {
   </head>
 
   <body>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <div>
   <%= render 'home/header' %>
   <main>
