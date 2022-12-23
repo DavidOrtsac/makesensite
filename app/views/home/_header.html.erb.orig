@@ -15,16 +15,35 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<!-- Left elements -->
 		  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<<<<<<< HEAD
+			<li class="mx-auto container"> <%= link_to "MakeSensei", home_index_path, class: "navbar-brand" %> </li>
+			<li class="nav-item"> <%= link_to "About", home_about_path, class: "nav-link" %> </li>
+
+			<% if user_signed_in? %>
+
+			<li class="nav-item"> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %> </li>
+			<li class="nav-item"> <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %> </li>
+
+				<% else %>
+						<li class="nav-item">
+						<%= link_to "Sign in", new_user_registration_path, class: "nav-link navbar-right" %>
+						</li>
+						<li class="nav-item pull-right">
+						<%= link_to "Log in", new_user_session_path, class: "nav-link navbar-right" %>
+						</li>
+				<% end %>
+
+=======
 			<li class="mx-auto container"> <%= link_to "MakeSensei", posts_path, class: "navbar-brand mt-2 mt-lg-0" %> </li>
 			<li class="nav-item">
 			<a class="nav-link" href="#">Quests</a>
 		  </li>
+>>>>>>> 491826202f074dc0dc920aef0efed7e9755a549f
 		  </ul>
 		</div>
 		<!-- Right elements -->
 		<div class="d-flex align-items-center">
 		  <!-- Avatar -->
-		  <% if user_signed_in? %>
 		  <div class="dropdown">
 			<a
 			  class="nav-link dropdown-toggle"
@@ -35,10 +54,10 @@
 			  aria-expanded="false"
 			>
 			  <img
-				src="https://i.ibb.co/gVqk6Qt/samuraipfp.png"
+				src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
 				class="rounded-circle"
 				height="25"
-				alt="User"
+				alt="Black and White Portrait of a Man"
 				loading="lazy"
 			  />
 			</a>
@@ -46,23 +65,25 @@
 			  class="dropdown-menu dropdown-menu-end"
 			  aria-labelledby="navbarDropdownMenuAvatar"
 			>
-			
+			<!-- <% if user_signed_in? %> -->
 			  <li>
-				<%= link_to "My Profile", edit_user_registration_path, method: :delete, class: "dropdown-item" %>
+				<a class="dropdown-item" href="#">Profile</a>
 			  </li>
 			  <li>
-				<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+				<a class="dropdown-item" href="#">Edit Profile</a>
 			  </li>
-			
-			</ul>
-			<% else %>
-			<li>
-				<%= link_to "Create Account", new_user_registration_path, class: "dropdown-item" %>
+			  <li>
+				<a class="dropdown-item" href="#">Logout</a>
+			  </li>
+			 <!-- <% else %> -->
+				<li>
+				<%= link_to "Sign in", new_user_registration_path, class: "dropdown-item" %>
 				</li>
 				<li>
-				<%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
+				<%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
 				</li>
-	  		<% end %>
+	  		<!-- <% end %> -->
+			</ul>
 		  </div>
 		</div>
 		<!-- Right elements -->
