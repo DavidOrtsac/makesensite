@@ -35,25 +35,23 @@
 			  aria-expanded="false"
 			>
 			  <img
-				src="https://i.ibb.co/gVqk6Qt/samuraipfp.png"
-				class="rounded-circle"
+				src="https://lh3.googleusercontent.com/H9zJ3craQuR13pGQl851lSNQkOH4oJJdCKkaMAaODS16G51rA34ME1Fkme2XBCUN8HcHO4K9KUN3GZp2OW5gWJ_itGfNxMQTApOlrrmNmDiDomdb54VLYtyorOglHwvnN76xXSmN7esmzKHjdpoAQ6UZsdvyGOZueklLqTYmkbiksVfA5qQDkN4t_CU2fBa6ZIxt-4rXcw_ZEjA-MsD3wjfWCRz8ygvA0vCMu2Q-roAn4qy9TnnUh79phfH6Nx4sGdu_IlHL5LnkYn5HCaUTBBPO97sXlwqLsirjXRSbO4fpg_YSAYvGRzLj1H9kFmdF-sdyvsQiEPT70Bsh-_eTVOuP-5FASIdz67IJ0AT20Cw2EGLEUfcHsgSDXHYD5H8HOnjkYRfc2Ez-LlYwHbV7azk2Ec1sQsGm0OGkfkvYQB177beZTvyT23ihA2QBN_3zMuyyw3OLh4XnsHt0b-LVyWDuvUuBJGGw_wAGv7FaLIUaKBga-_4u2QyjtBzW9JREWt_kYMlPntNhfK-sxMgtaoWrO08TTlXEORBw5Wgss7EbjiE0tV3NwurKyk7C-5msdH6R8xABo67h7vf2wnT7TXVX6hpVQiZwAzxlD-lce7GmmH_odpQlmSKEd4Vb6G3p-k3hi5yijQFxsk8KcLrU5I1gdpFwlfOKcxI6LYwRHNxDIHr4cUVi9IpPXuhGMLNeTLLSMHJYgBfrU6rGxyEPitalKOdf_8lTqYUNArBridh_q6mLrNW99ESkA7vSrtl6U9l_RX0sjxXL3xVO_y0Bm00uQ28d-_S9ek_5tYDTHy-vx2XkJxT-Fj1kVOqaEw6lQuC6RE9vkidqRGWd-INwH-j3zh0A_lRTas7PzaJaIphONp3Qc8Og33cEg6ZZzc4AElo7AnKdUN-THScUFvsOrKL3HeGCz6UF68ftEmkO7yTGTVZRIswcDGp9Ul5XfFroBJIiP_DE1d38IcCW8wXrOzMMNOWTR0VzoeY4ByH47zi5dK49TKNwY1SoPM_G8Enfxy1WZMXix7thXCd0W8Ks47TqGKqw=w313-h311-no?authuser=0"
+				class="rounded-circle outline"
 				height="25"
 				alt="User"
 				loading="lazy"
 			  />
 			</a>
 			<ul
-			  class="dropdown-menu dropdown-menu-end"
+			  class="dropdown-menu dropdown-menu-end border"
 			  aria-labelledby="navbarDropdownMenuAvatar"
 			>
-			
 			  <li>
 				<%= link_to "My Profile", edit_user_registration_path, method: :delete, class: "dropdown-item" %>
 			  </li>
 			  <li>
 				<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
 			  </li>
-			
 			</ul>
 			<% else %>
 			<li>

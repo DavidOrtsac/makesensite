@@ -314,6 +314,7 @@
 .dropdown-item {
 background-color: #111111;
 color: white;
+transition: 0.5s;
 
 }
 .coverbackground {
