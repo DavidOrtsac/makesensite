@@ -3,5 +3,10 @@
     <strong>Title:</strong>
     <%= pin.title %>
   </p>
-
+  <%= pin.body %>
+  <br/>
+  <%= pin.image %>
+  <%= pin.pictures.each do |picture| %>
+   <%= picture %>
+ <% end %>
 </div>
