@@ -1,12 +1,12 @@
-<div id="<%= dom_id pin %>">
+<div id="<%= dom_id pin %>" class="rounded shadow m-3 p-3">
   <p>
     <strong>Title:</strong>
     <%= pin.title %>
   </p>
   <%= pin.body %>
   <br/>
-  <%= pin.image %>
-  <%= pin.pictures.each do |picture| %>
-   <%= picture %>
+  <hr/>
+  <% pin.pictures.each do |picture| %>
+    <%= link_to image_tag(picture), picture %>
  <% end %>
 </div>

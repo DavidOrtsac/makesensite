@@ -40,7 +40,9 @@
   margin-left: auto;
 }
 
-  
+  .blackdiv {
+    background-color: black;
+  }
   .mobileshow {
     display: none;
   }
