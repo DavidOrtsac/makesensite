@@ -13,10 +13,17 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "mini_portile2", "~> 2.7", ">= 2.7.1"
 gem "simple_form", "~> 5.1"
-gem "material_icons", "~> 2.2", ">= 2.2.1"
 gem "rinku", "~> 2.0", ">= 2.0.6"
+
+# Designing
+gem "material_icons", "~> 2.2", ">= 2.2.1"
 gem "font-awesome-rails"
+gem "jquery-rails"
+gem "sass-rails"
+
+# Devise and Admin
 gem "devise", "~> 4.8", ">= 4.8.1"
+gem "activeadmin"
 
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
