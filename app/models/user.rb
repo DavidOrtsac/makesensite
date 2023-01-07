@@ -2,15 +2,18 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, 
-         :validatable, authentication_keys: [:login]
+         :recoverable, :rememberable, 
+         :validatable, authentication_keys: [:login,:username,:email]
 
   attr_writer :login
-  validate :validate_username
 
-  def login
-    @login || self.username || self.email
+  protected
+
+  def login=(login)
+    @login = login
   end
+
+private
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
@@ -26,4 +29,5 @@ class User < ApplicationRecord
       errors.add(:username, :invalid)
     end
   end
-end
+
+ end
